@@ -1,0 +1,8 @@
+{{ routes.forEach(function(route) { }}
+    ## {{= route.methods.join(', ').toUpperCase() }} - {{= route.path }}
+    {{ if (route.description) { }}
+        {{= route.description }}
+    {{ } }}
+{{ }); }}
+
+

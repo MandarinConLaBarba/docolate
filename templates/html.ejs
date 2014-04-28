@@ -1,0 +1,29 @@
+<html>
+
+
+    <body>
+
+    {{ routes.forEach(function(route) { }}
+    <h3> {{= route.methods.join(', ').toUpperCase() }} - {{= route.path }}</h3>
+        {{ if (route.description) { }}
+            <p>{{= route.description }}</p>
+        {{ } }}
+
+        {{ if (route.params) { }}
+            <h4>Params:</h4>
+
+            {{ route.params.forEach(function(param) { }}
+                name : {{= param.name }}<br/>
+                body : {{= param.body }}<br/>
+                type : {{= param.type }}<br/>
+                description: {{= param.description }}<br/>
+            {{ }); }}
+
+        {{ } }}
+    {{ }); }}
+
+
+
+    </body>
+
+</html>
