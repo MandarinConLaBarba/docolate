@@ -1,6 +1,6 @@
 # Docolate
 
-Docolate (a contraction of "Doc" and "Chocolate") is a documentation generator for the Express framework.
+Docolate (a contraction of "Doc" and "Chocolate") is a documentation generator for the Express framework. Targets Express 3.x and 4.x only.
 
 ## Usage
 
