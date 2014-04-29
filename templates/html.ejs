@@ -29,28 +29,28 @@
         <h1>API Documentation</h1>
 
         <div id="routeContainer">
-            {{ routes.forEach(function(route) { }}
-                <h3> {{= route.methods.join(', ').toUpperCase() }} - {{= route.path }}</h3>
-                {{ if (route.description) { }}
-                    <p>{{= route.description }}</p>
-                {{ } }}
+            <% routes.forEach(function(route) { %>
+                <h3> <%= route.methods.join(', ').toUpperCase() %> - <%= route.path %></h3>
+                <% if (route.description) { %>
+                    <p><%= route.description %></p>
+                <% } %>
 
-                {{ if (route.params && route.params.length) { }}
+                <% if (route.params && route.params.length) { %>
                     <h4>Params:</h4>
 
-                    {{ route.params.forEach(function(param) { }}
-                        name : {{= param.name }}<br/>
-                        body : {{= param.body }}<br/>
-                        {{ if (param.type) { }}
-                            type : {{= param.type }}<br/>
-                        {{ } }}
-                        {{ if (param.description) { }}
-                            description: {{= param.description }}<br/><br/>
-                        {{ } }}
-                    {{ }); }}
+                    <% route.params.forEach(function(param) { %>
+                        name : <%= param.name %><br/>
+                        body : <%= param.body %><br/>
+                        <% if (param.type) { %>
+                            type : <%= param.type %><br/>
+                        <% } %>
+                        <% if (param.description) { %>
+                            description: <%= param.description %><br/><br/>
+                        <% } %>
+                    <% }); %>
 
-                {{ } }}
-            {{ }); }}
+                <% } %>
+            <% }); %>
 
         </div>
 

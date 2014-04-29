@@ -12,6 +12,13 @@
     "methods": "^0.1.0",
     "path-to-regexp": "^0.1.2",
     "express": "^4.1.1",
-    "minimatch": "^0.2.14"
+    "minimatch": "^0.2.14",
+    "grunt-contrib-jshint": "^0.10.0"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "grunt-bump": "0.0.13",
+    "grunt-shell": "^0.7.0",
+    "grunt-mocha-test": "^0.10.2"
   }
 }
