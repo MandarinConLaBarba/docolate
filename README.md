@@ -84,6 +84,6 @@ app.post("/items", function(req, res) {
 });
 ```
 
-## API
+## Examples
 
-TODO..
+Check out the some of the generated HTML files in the [examples](./examples/) directory.
