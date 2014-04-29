@@ -20,6 +20,11 @@ module.exports = function(grunt) {
                 'Gruntfile.js',
                 'examples/*.js',
                 'lib/**/*.js']
+        },
+        bump: {
+            options: {
+                pushTo: 'origin'
+            }
         }
     };
     grunt.initConfig(config);
