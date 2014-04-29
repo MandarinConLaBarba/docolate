@@ -1,6 +1,6 @@
 {
   "name": "docolate",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "index.js",
   "author": "Mandarin Drummond",
@@ -10,6 +10,8 @@
     "underscore": "^1.6.0",
     "bluebird": "^1.2.4",
     "methods": "^0.1.0",
-    "path-to-regexp": "^0.1.2"
+    "path-to-regexp": "^0.1.2",
+    "express": "^4.1.1",
+    "minimatch": "^0.2.14"
   }
 }
