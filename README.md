@@ -38,6 +38,7 @@ Change the output format like so:
 
 ## Exclusions/Inclusions
 
+Exclusions or inclusions allow you to dictate what gets documented in the output.
 Exclusions and inclusions accept a string or an array of glob (String) or regular expressions (RegExp). Exclusions trump
 inclusions. Inclusions have the effect of excluding anything that does NOT match.
 
