@@ -15,7 +15,11 @@
                 width: 50%;
             }
 
-            #routeContainer {
+            #routeListContainer {
+                margin-left: 20px;
+            }
+
+            .routeContentContainer {
                 margin-left: 20px;
             }
 
@@ -28,9 +32,12 @@
 
         <h1>API Documentation</h1>
 
-        <div id="routeContainer">
+        <div id="routeListContainer">
+            <div class="routeContainer">
             <% routes.forEach(function(route) { %>
                 <h3> <%= route.methods.join(', ').toUpperCase() %> - <%= route.path %></h3>
+
+                <div class="routeContentContainer">
                 <% if (route.description) { %>
                     <p><%= route.description %></p>
                 <% } %>
@@ -50,8 +57,9 @@
                     <% }); %>
 
                 <% } %>
+                </div>
             <% }); %>
-
+            </div>
         </div>
 
 
