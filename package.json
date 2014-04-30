@@ -19,6 +19,8 @@
     "grunt": "^0.4.4",
     "grunt-bump": "0.0.13",
     "grunt-shell": "^0.7.0",
-    "grunt-mocha-test": "^0.10.2"
+    "grunt-mocha-test": "^0.10.2",
+    "sinon": "^1.9.1",
+    "should": "^3.3.1"
   }
 }
