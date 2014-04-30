@@ -1,6 +1,13 @@
 # Docolate
 
-Docolate (a contraction of "Doc" and "Chocolate") is a documentation generator for the Express framework. Targets Express 3.x and 4.x only.
+## Easy Express API Documentation
+
+Docolate (pronounced like "Doc" + "Chocolate") is designed to make REST-style API docs for Express a little easier.
+Targets Express 3.x and 4.x. More info [here](http://mandarindrummond.com/articles/docolate/index.html).
+Benefits include:
+
+* Generate a lot of useful documentation without having to document anything
+* Custom documentation can be generated from declarations attached directly to route logic
 
 ## Usage
 
