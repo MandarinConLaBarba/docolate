@@ -1,9 +1,24 @@
 {
   "name": "docolate",
   "version": "0.0.6",
-  "description": "",
+  "description": "Easy Express API Documentation",
   "main": "index.js",
-  "author": "Mandarin Drummond",
+  "keywords": [
+    "docolate",
+    "express",
+    "REST",
+    "API",
+    "docs",
+    "documentation"
+  ],
+  "author": {
+      "name" : "Mandarin Drummond",
+      "url" : "http://mandarindrummond.com"
+  },
+  "repository" : {
+      "type" : "git",
+      "url" : "https://github.com/MandarinConLaBarba/docolate.git"
+  },
   "dependencies": {
     "utils-merge": "^1.0.0",
     "ejs": "^1.0.0",
