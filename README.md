@@ -38,8 +38,8 @@ Then you can view the generated documentation in the path specified above (i.e. 
 Change the output format like so:
 
 ```
+ app.get('/docs', doc.route()); //defaults to html
  app.get('/docs', doc.route('markdown'));
- app.get('/docs', doc.route('html'));
  app.get('/docs', doc.route('json'));
 ```
 
@@ -90,6 +90,24 @@ app.post("/items", function(req, res) {
     returns : "item ID"
 });
 ```
+
+## Add to your build pipeline
+
+```
+var app = appFactory.buildApp();
+doc.render().then(function() {
+  //proceed w/ build..
+});
+```
+
+## Add your own template
+
+```
+app.get('/docs', doc.route('html', 'path/to/ejs/template.ejs');
+```
+
+You can use the bundled templates as a guide. Find them [here](./templates/).
+
 
 ## Examples
 
