@@ -1,6 +1,6 @@
 {
   "name": "docolate",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Easy Express API Documentation",
   "main": "index.js",
   "keywords": [
