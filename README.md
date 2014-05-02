@@ -95,7 +95,8 @@ app.post("/items", function(req, res) {
 
 ```
 var app = appFactory.buildApp();
-doc.render().then(function() {
+doc.render().then(function(html) {
+  //write docs to file
   //proceed w/ build..
 });
 ```
