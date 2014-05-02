@@ -33,11 +33,7 @@ module.exports = {
 
         return doc.render(doc.templates.html).then(function(html) {
             return writeFile(__dirname + "/app.simpleCase.html", html);
-        }).then(function() {
-                console.log("Example generated");
-            }, function(reason) {
-                console.error("Failed to generate doc: " + reason);
-            });
+        });
     }
 };
 

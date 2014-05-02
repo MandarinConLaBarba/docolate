@@ -45,7 +45,9 @@ module.exports = function(grunt) {
         var done = this.async();
 
         require(__dirname + "/examples/app.simpleCase.js").run()
-            .lastly(done);
+            .then(done, function(reason) {
+                grunt.fail.fatal(reason);
+            });
     });
 
 };

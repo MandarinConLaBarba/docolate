@@ -16,11 +16,21 @@
             }
 
             #routeListContainer {
-                margin-left: 20px;
             }
 
             .routeContentContainer {
                 margin-left: 20px;
+            }
+
+            .routeContainer {
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                border-radius: 3px;
+                box-shadow: 1px 1px 1px #8a8a8a;
+                border: 1px solid #545454;
+                padding: 0px 5px 5px 5px;
+                margin-bottom: 10px;
+                background-color: #efffff;
             }
 
         </style>
@@ -33,8 +43,9 @@
         <h1>API Documentation</h1>
 
         <div id="routeListContainer">
-            <div class="routeContainer">
+
             <% routes.forEach(function(route) { %>
+              <div class="routeContainer">
                 <h3> <%= route.methods.join(', ').toUpperCase() %> - <%= route.path %></h3>
 
                 <div class="routeContentContainer">
@@ -43,21 +54,50 @@
                 <% } %>
 
                 <% if (route.params && route.params.length) { %>
-                    <h4>Params:</h4>
+                    <% var bodyParams = false; %>
+                    <% var uriParams = false; %>
 
                     <% route.params.forEach(function(param) { %>
-                        name : <%= param.name %><br/>
-                        body : <%= param.body %><br/>
-                        <% if (param.type) { %>
-                            type : <%= param.type %><br/>
-                        <% } %>
-                        <% if (param.description) { %>
-                            description: <%= param.description %><br/><br/>
+                        <% if (!param.body) { %>
+                            <% if (!uriParams) {
+                                    uriParams = true;
+                            %>
+                                <h4>URI Params</h4>
+                            <% } %>
+
+                            name : <%= param.name %><br/>
+                            <% if (param.type) { %>
+                                type : <%= param.type %><br/>
+                            <% } %>
+                            <% if (param.description) { %>
+                                description: <%= param.description %><br/><br/>
+                            <% } %>
                         <% } %>
                     <% }); %>
 
+
+                    <% route.params.forEach(function(param) { %>
+                        <% if (param.body) { %>
+                            <% if (!bodyParams) {
+                                bodyParams = true;
+                            %>
+                                <h4>Body Params</h4>
+                            <% } %>
+
+                            name : <%= param.name %><br/>
+                            <% if (param.type) { %>
+                                type : <%= param.type %><br/>
+                            <% } %>
+                            <% if (param.description) { %>
+                                description: <%= param.description %><br/><br/>
+                            <% } %>
+                        <% } %>
+                    <% }); %>
+
+
                 <% } %>
                 </div>
+              </div>
             <% }); %>
             </div>
         </div>

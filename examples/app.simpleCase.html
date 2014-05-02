@@ -16,11 +16,21 @@
             }
 
             #routeListContainer {
-                margin-left: 20px;
             }
 
             .routeContentContainer {
                 margin-left: 20px;
+            }
+
+            .routeContainer {
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                border-radius: 3px;
+                box-shadow: 1px 1px 1px #8a8a8a;
+                border: 1px solid #545454;
+                padding: 0px 5px 5px 5px;
+                margin-bottom: 10px;
+                background-color: #efffff;
             }
 
         </style>
@@ -33,8 +43,9 @@
         <h1>API Documentation</h1>
 
         <div id="routeListContainer">
-            <div class="routeContainer">
+
             
+              <div class="routeContainer">
                 <h3> POST - /items</h3>
 
                 <div class="routeContentContainer">
@@ -44,7 +55,9 @@
 
                 
                 </div>
+              </div>
             
+              <div class="routeContainer">
                 <h3> POST - /users</h3>
 
                 <div class="routeContentContainer">
@@ -53,22 +66,34 @@
                 
 
                 
-                    <h4>Params:</h4>
+                    
+                    
 
                     
-                        name : User<br/>
-                        body : true<br/>
-                        
-                            type : unknown<br/>
-                        
-                        
-                            description: A User object<br/><br/>
                         
                     
+
+
+                    
+                        
+                            
+                                <h4>Body Params</h4>
+                            
+
+                            name : User<br/>
+                            
+                            
+                                description: A User object<br/><br/>
+                            
+                        
+                    
+
 
                 
                 </div>
+              </div>
             
+              <div class="routeContainer">
                 <h3> GET - /items</h3>
 
                 <div class="routeContentContainer">
@@ -78,7 +103,9 @@
 
                 
                 </div>
+              </div>
             
+              <div class="routeContainer">
                 <h3> GET - /items/:itemId</h3>
 
                 <div class="routeContentContainer">
@@ -87,17 +114,30 @@
                 
 
                 
-                    <h4>Params:</h4>
+                    
+                    
 
                     
-                        name : itemId<br/>
-                        body : false<br/>
                         
+                            
+                                <h4>URI Params</h4>
+                            
+
+                            name : itemId<br/>
+                            
+                            
                         
                     
+
+
+                    
+                        
+                    
+
 
                 
                 </div>
+              </div>
             
             </div>
         </div>
